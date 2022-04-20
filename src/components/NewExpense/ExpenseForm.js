@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./ExpenseForm.css";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   const [title, setTitle] = useState("");
   const [amount, setEnteredAmount] = useState("");
   const [date, setEnteredDate] = useState("");
@@ -21,9 +21,9 @@ const ExpenseForm = () => {
     const expenseData = {
       title: title,
       amount: amount,
-      date: date,
+      date: new Date(date),
     };
-
+    props.onSaveExpenseData(expenseData);
     // Two way binding
     //meaning gotta use variable of useState in input El
     setTitle("");
