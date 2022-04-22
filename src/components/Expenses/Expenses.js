@@ -5,7 +5,7 @@ import ExpensesFilter from "./ExpenseFilter";
 import { useState } from "react";
 
 const Expenses = ({ expenses }) => {
-  debugger;
+  
   const [expenseFilter, setExpenseFilter] = useState("2019");
   const expenseFilterHandler = (filterValue) => {
     setExpenseFilter(filterValue);
