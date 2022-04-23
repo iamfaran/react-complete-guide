@@ -7,7 +7,6 @@ const ExpensesFilter = (props) => {
     props.onChangeExpense(e.target.value);
   };
 
-  console.log(props.expFilterValue);
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
